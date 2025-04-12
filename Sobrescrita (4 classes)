@@ -1,0 +1,174 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Classe para instanciar objetos dos diversos tipos de animais
+ * @author Tiago Chaves
+ * Classe criada em 03/10/2024
+ */
+public class Zoológico {
+    public static void main(String args[]){
+        Mamífero m = new Mamífero();
+        m.exibirDadosAnimal();            
+    }//Fim do main
+    
+}//Fim da classe
+
+/***********************************************************************************************************************************************************************/
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *Classe para demonstrar o recurso de linguagem chamado Sobrescrita de método
+ * @author Tiago Chaves
+ * date: 03/10/2024
+ */
+public class Animal {
+    String raça;
+    int idade;
+    String cor;
+    
+    //  Construtor da classe Animal
+    public Animal (String raça, int idade, String cor){
+        this.raça = raça;
+        this.idade = idade;
+        this.cor = cor;
+    }
+    
+    //Construtor vazio
+    public Animal(){
+        
+    }
+    
+    //Método comum para exibir os dados de um Animal
+    public void exibirDadosAnimal(){
+        System.out.println("Raça: " + raça);
+        System.out.println("Idade do animal: " + idade);
+        System.out.println("Cor predominante: " + cor   );
+    }
+    
+    //Método para exibir alimentação do Animal
+    public void alimentarAnimal(){
+        System.out.println("O animal se alimenta");
+    }
+    
+}//Fim da classe
+
+/***********************************************************************************************************************************************************************/
+
+
+import javax.swing.JOptionPane;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *Classe que herda todos os atributos e métodos da Super Classe Animal
+ * Também é demonstrado a "Sobrescrita de métodos"
+ * @author Tiago Chaves
+ * 03/10/2024
+ */
+public class Mamífero extends Animal{
+    boolean pelo;
+    int qtdePatas;
+    int tetos;
+    
+    //Construtor de animal do tipo Mamífero
+    public Mamífero(String raça, int idade, String cor, boolean pelo, 
+            int qtdePatas, int tetos){
+        super(raça, idade, cor);
+        this.pelo = pelo;
+        this.qtdePatas = qtdePatas;
+        this.tetos = tetos;
+    }
+    
+    //Construtor sobrecarregado para entrada de dados por meio de GUI
+    public Mamífero(){
+        this.raça = JOptionPane.showInputDialog("Raça: ");
+        this.idade = Integer.parseInt(JOptionPane.showInputDialog("Idade: ")); 
+        this.cor = JOptionPane.showInputDialog("Cor: ");
+        this.pelo = Boolean.parseBoolean(JOptionPane.showInputDialog("Pelo: "));
+        this.qtdePatas = Integer.parseInt(JOptionPane.showInputDialog("Quantidade de Patas: "));
+        this.tetos = Integer.parseInt(JOptionPane.showInputDialog("Quantidade de Tetos: "));
+        
+    }
+    
+    //Método sobrescrito da superclasse Animal
+    @Override
+    public void exibirDadosAnimal(){
+        super.exibirDadosAnimal();
+        System.out.println("O mamífero " + raça + " tem " + qtdePatas + 
+                " Patas");
+    }
+        public void alimentarAnimal(){
+        System.out.println("O Mamífero se alimenta de leite nos anos iniciais");
+        System.out.println("Depois ele pode se tornar carnívoro ou não");
+        }
+        
+        public void alimentarAanimal(String alimento){
+            System.out.println("O mamífero " + raça + " se alimenta de " 
+                    + alimento);
+        }
+    
+}//fim da classe
+
+/***********************************************************************************************************************************************************************/
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author 2830482311018
+ */
+public class Anfibio extends Animal{
+    boolean pular;
+    boolean veneno;
+    int temperatura;
+    
+    //Construtor de animal do tipo Mamífero
+    public Anfibio(String raça, int idade, String cor, boolean pular, 
+            boolean veneno, int temperatura){
+        super(raça, idade, cor);
+        this.pular = pular;
+        this.veneno = veneno;
+        this.temperatura = temperatura;
+    }
+    
+    //Método sobrescrito da superclasse Animal
+    @Override
+    public void exibirDadosAnimal(){
+        System.out.println("\n\nO anfibio " + raça + " possui veneno? " + veneno + 
+                " e a sua temperatura é de: " + temperatura);
+    }
+        public void alimentarAnimal(){
+        System.out.println("a prole se alimenta de uma camada da pele materna durante os primeiros meses de vida");
+        System.out.println("Depois ele pode se tornar carnívoro ou não");
+        }
+        
+        public void alimentarAanimal(String alimento){
+            System.out.println("O anfibio " + raça + " se alimenta de " 
+                    + alimento);
+        }
+    
+}//fim da classe
+
+
+ 
+    
+
+
+
