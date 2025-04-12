@@ -83,4 +83,5 @@ public class Desenho {
         f1.exibirFigura(222);
         f3.exibirFigura("w", 10, 20);
         f4.exibirFigura("w", 10, 20, 30);
+
     }//Fim do main
