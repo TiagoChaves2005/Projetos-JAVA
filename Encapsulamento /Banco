@@ -1,0 +1,15 @@
+/**
+ * Classe para instanciar objetos encapsulados da classe Conta
+ * @author 2830482311018
+ * data: 17/10/2024
+ */
+public class Banco {
+    public static void main(String[] args){
+        Conta cc = new Conta("Gervásio", 1000f,1234);
+        cc.exibirDadosConta();
+        cc.realizarSaque();
+        cc.exibirDadosConta();
+    }//Fim do main
+    
+}//Fim da Classe
+
