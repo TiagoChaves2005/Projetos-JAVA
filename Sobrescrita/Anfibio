@@ -1,0 +1,36 @@
+
+/**
+ *
+ * @author Tiago Moura Chaves
+ */
+public class Anfibio extends Animal{
+    boolean pular;
+    boolean veneno;
+    int temperatura;
+    
+    //Construtor de animal do tipo Mamífero
+    public Anfibio(String raça, int idade, String cor, boolean pular, 
+            boolean veneno, int temperatura){
+        super(raça, idade, cor);
+        this.pular = pular;
+        this.veneno = veneno;
+        this.temperatura = temperatura;
+    }
+    
+    //Método sobrescrito da superclasse Animal
+    @Override
+    public void exibirDadosAnimal(){
+        System.out.println("\n\nO anfibio " + raça + " possui veneno? " + veneno + 
+                " e a sua temperatura é de: " + temperatura);
+    }
+        public void alimentarAnimal(){
+        System.out.println("a prole se alimenta de uma camada da pele materna durante os primeiros meses de vida");
+        System.out.println("Depois ele pode se tornar carnívoro ou não");
+        }
+        
+        public void alimentarAanimal(String alimento){
+            System.out.println("O anfibio " + raça + " se alimenta de " 
+                    + alimento);
+        }
+    
+}//fim da classe
