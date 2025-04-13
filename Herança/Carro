@@ -1,0 +1,30 @@
+/**
+ * Classe herdeira de Veiculo para gerar um objeto do tipo Carro
+ * @author Tiago Moura Chaves
+ */
+public class Carro extends Veiculo{
+    float potencia;
+    int volumePM;
+    int numPass;
+   
+    //Construtor do objeto Carro
+    public Carro(String marca, String modelo, int ano, float preço,
+            float potencia, int volumePM, int numPass)
+    {
+        super(marca, modelo, ano, preço);
+        this.potencia = potencia;
+        this.volumePM = volumePM;
+        this.numPass = numPass;
+    }
+    
+    //metodo comum para exibir os dados do objeto Carro
+    public void exibirDadosCarro(){
+        super.exibirDadosVeiculo();
+        System.out.println("Potência: " + potencia);
+        System.out.println("Volume do porta malas: " + this.volumePM);
+        System.out.println("numPass: " + numPass);
+        
+        
+    }
+    
+}//fim da classe
