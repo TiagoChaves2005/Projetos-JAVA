@@ -1,0 +1,61 @@
+
+import javax.swing.JOptionPane;
+/**
+ * Classe para apresentar um menu de opções (Cardápo) da pizzaria
+ * @author Tiago Moura Chaves
+ */
+public class Menu {
+    Forno forno = new Forno();//objeto polimórfico
+    Pizza pizza;//Objeto abstrato - nenhum sabor da pizza
+    
+
+    
+    public Menu(){
+        while(true){
+    String menu;
+    int opc;
+    menu = "1 - Margherita"
+            +"\n2 - Portuguesa"
+            +"\n3 - Frango com Catupiry"
+            +"\n4 - Bolo de Laranja"
+            +"\n5 - Calabresa"
+            +"\n6 - Muçarela"
+            +"\n7 - Quatro queijos"
+            +"\n8 - Pão"
+            +"\n9 - Torta"
+            +"\n0 - Finalizar";
+            
+            
+            opc = Integer.parseInt(JOptionPane.showInputDialog(null, menu, "Escolha sua opção", 3));
+            
+            switch(opc) {
+                case 1: pizza = new Margherita();
+                break;
+                case 2: pizza = new Portuguesa();
+                break;
+                case 3: pizza = new FrangoCatupiry();
+                break;
+                case 4: pizza = new BoloLaranja();
+                break;
+                case 5: pizza = new Calabresa();
+                break;
+                case 6: pizza = new Mucarela();
+                break;
+                case 7: pizza = new QuatroQueijos();
+                break;
+                case 8: pizza = new Pao();
+                break;
+                case 9: pizza = new Torta();
+                break;
+                case 0: System.exit(0); 
+                
+                default: JOptionPane.showMessageDialog(null, "Opção inválida!");
+                    pizza = null;
+                
+            }//Fim do switch
+            if(pizza != null)
+                forno.preparar(pizza);
+         
+        }//fim do while   
+            }//Fim do construtor
+}//Fim da classe
