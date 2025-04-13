@@ -1,0 +1,52 @@
+import javax.swing.JOptionPane;
+
+/**
+ *Classe que herda todos os atributos e métodos da Super Classe Animal
+ * Também é demonstrado a "Sobrescrita de métodos"
+ * @author Tiago Chaves
+ * 03/10/2024
+ */
+public class Mamífero extends Animal{
+    boolean pelo;
+    int qtdePatas;
+    int tetos;
+    
+    //Construtor de animal do tipo Mamífero
+    public Mamífero(String raça, int idade, String cor, boolean pelo, 
+            int qtdePatas, int tetos){
+        super(raça, idade, cor);
+        this.pelo = pelo;
+        this.qtdePatas = qtdePatas;
+        this.tetos = tetos;
+    }
+    
+    //Construtor sobrecarregado para entrada de dados por meio de GUI
+    public Mamífero(){
+        this.raça = JOptionPane.showInputDialog("Raça: ");
+        this.idade = Integer.parseInt(JOptionPane.showInputDialog("Idade: ")); 
+        this.cor = JOptionPane.showInputDialog("Cor: ");
+        this.pelo = Boolean.parseBoolean(JOptionPane.showInputDialog("Pelo: "));
+        this.qtdePatas = Integer.parseInt(JOptionPane.showInputDialog("Quantidade de Patas: "));
+        this.tetos = Integer.parseInt(JOptionPane.showInputDialog("Quantidade de Tetos: "));
+        
+    }
+    
+    //Método sobrescrito da superclasse Animal
+    @Override
+    public void exibirDadosAnimal(){
+        super.exibirDadosAnimal();
+        System.out.println("O mamífero " + raça + " tem " + qtdePatas + 
+                " Patas");
+    }
+        public void alimentarAnimal(){
+        System.out.println("O Mamífero se alimenta de leite nos anos iniciais");
+        System.out.println("Depois ele pode se tornar carnívoro ou não");
+        }
+        
+        public void alimentarAanimal(String alimento){
+            System.out.println("O mamífero " + raça + " se alimenta de " 
+                    + alimento);
+        }
+    
+}//fim da classe
+
