@@ -1,0 +1,13 @@
+
+/**
+ * Interface para determinar funcionalidades básicas para qualquer tipo de eletrodomestico
+ * @author Tiago Chaves
+ * data: 24/10/2024
+ */
+public interface Eletrodomestico {
+    
+    public void ligar();
+    
+    public void desligar();
+    
+}//Fim da interface
