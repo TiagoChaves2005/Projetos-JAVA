@@ -1,0 +1,23 @@
+/**
+ *
+ * @author Tiago Moura Chaves
+ */
+public class QuatroQueijos implements Pizza {
+    
+    @Override
+    public void montar() {
+        System.out.println("Pizza Quatro Queijos");
+        System.out.println("Molho de tomate, muçarela, gorgonzola, parmesão, provolone, farinha de trigo, sal, fermento, água morna, óleo, açúcar, azeitona");
+    }
+
+    @Override
+    public void assar() {
+        System.out.println("Tempo de forno: 30 min");
+    }
+
+    @Override
+    public void cobrar() {
+        System.out.println("Preço: R$ 77,00");
+    }
+    
+}//Fim da classe
