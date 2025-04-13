@@ -1,0 +1,12 @@
+/**
+ * Classe para criar o objeto de comportamento POLIMÓRFICO Forno
+ * @author Luiz Felipe de Oliveira
+ * @since Classe criada em 31/10/2024
+ */
+public class Forno {
+    public void preparar(Pizza pizza){
+        pizza.montar();
+        pizza.assar();
+        pizza.cobrar();
+    }
+}//fim da classe
