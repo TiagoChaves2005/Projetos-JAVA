@@ -1,0 +1,29 @@
+
+/**
+ * Classe para implementar todos os metodos da interface Eletrodomésticos
+ * @author Tiago Chaves
+ * data: 24/10/2024
+ */
+public class TV implements Eletrodomestico{
+    
+    @Override
+    public void ligar(){
+        System.out.println("A tv foi ligada!!");
+    }
+    
+    @Override
+    public void desligar(){
+        System.out.println("A tv foi desligada!!");
+    }
+    
+    //Metodo para desligar a tv depois que passar um periodo de tempo especificado pelo usuário
+    public void ativarSoneca(int min) throws InterruptedException{
+        System.out.println("A tv será desligada em " + min + " minutos");
+        
+        for(min = min; min > 0; min--){
+            Thread.sleep(1000);
+        }
+        desligar();
+    }
+    
+}// fim da classe
