@@ -1,0 +1,15 @@
+/**
+ * Interface criada para determinar quais funcionalidades terão os objetor concretos a partir dela
+ * @author Tiago Moura Chaves
+ * @since Interface criada em 31/10/2024
+ */
+public interface Pizza {
+    //Como reunir os ingredientes da pizza
+    public void montar();
+    
+    //Tempo que a pizza ficará no forno
+    public void assar();
+    
+    //Valor a ser cobrado pela pizza
+    public void cobrar();
+}//Fim da interface
