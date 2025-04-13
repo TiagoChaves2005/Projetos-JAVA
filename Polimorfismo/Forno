@@ -1,6 +1,6 @@
 /**
  * Classe para criar o objeto de comportamento POLIMÓRFICO Forno
- * @author Luiz Felipe de Oliveira
+ * @author Tiago Moura Chaves
  * @since Classe criada em 31/10/2024
  */
 public class Forno {
