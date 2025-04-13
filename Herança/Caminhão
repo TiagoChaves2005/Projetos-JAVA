@@ -1,6 +1,6 @@
 /**
  * Classe herdeira de Veiculo para gerar um objeto do tipo Caminhão
- * @author 2830482311018
+ * @author Tiago Moura Chaves
  */
 public class Caminhão extends Veiculo{
     String tipoCarroceria;
