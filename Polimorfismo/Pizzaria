@@ -1,0 +1,12 @@
+/**
+ *
+ * @author Tiago Moura Chaves
+ */
+public class Pizzaria {
+    
+    public static void main(String[] args) {
+        
+        Menu menu = new Menu();
+        
+    }//fim do main
+}//fim da classe
