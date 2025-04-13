@@ -12,48 +12,6 @@ public class Concessionária {
         caminhao.exibirDadosCaminhão();
     }
     
-}
-/*---------------------------------------------------------------------------------------------------------------------------------------------*/
+}//fim do main
 
-/*---------------------------------------------------------------------------------------------------------------------------------------------*/
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Classe herdeira de Veiculo para gerar um objeto do tipo Caminhão
- * @author 2830482311018
- */
-public class Caminhão extends Veiculo{
-    String tipoCarroceria;
-    int nEixos;
-    int qtdePneus;
-    boolean refrigerado;
-   
-    //Construtor do objeto Caminhão
-    public Caminhão(String marca, String modelo, int ano, float preço,
-            String tipoCarroceria, int nEixos, int qtdePneus, boolean refrigerado)
-    {
-        super(marca, modelo, ano, preço);
-        this.tipoCarroceria = tipoCarroceria;
-        this.nEixos = nEixos;
-        this.qtdePneus = qtdePneus;
-        this.refrigerado = refrigerado;
-    }
-    
-    //metodo comum para exibir os dados do objeto Caminhão
-    public void exibirDadosCaminhão(){
-        super.exibirDadosVeiculo();
-        System.out.println("Tipo de carroceria: " + tipoCarroceria);
-        System.out.println("Número de eixos: " + this.nEixos);
-        System.out.println("quantidade de Pneus: " + qtdePneus);
-        System.out.println("Refrigeração: " + (refrigerado?"Sim":"Não"));
-        
-        
-    }
-    
-}
 
