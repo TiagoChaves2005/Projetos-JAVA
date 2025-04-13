@@ -1,0 +1,35 @@
+/**
+ *Classe para demonstrar o recurso de linguagem chamado Sobrescrita de método
+ * @author Tiago Chaves
+ * date: 03/10/2024
+ */
+public class Animal {
+    String raça;
+    int idade;
+    String cor;
+    
+    //  Construtor da classe Animal
+    public Animal (String raça, int idade, String cor){
+        this.raça = raça;
+        this.idade = idade;
+        this.cor = cor;
+    }
+    
+    //Construtor vazio
+    public Animal(){
+        
+    }
+    
+    //Método comum para exibir os dados de um Animal
+    public void exibirDadosAnimal(){
+        System.out.println("Raça: " + raça);
+        System.out.println("Idade do animal: " + idade);
+        System.out.println("Cor predominante: " + cor   );
+    }
+    
+    //Método para exibir alimentação do Animal
+    public void alimentarAnimal(){
+        System.out.println("O animal se alimenta");
+    }
+    
+}//Fim da classe
