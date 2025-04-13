@@ -1,0 +1,24 @@
+/**
+ * Classe para implementar todos os método abstratos da interface pizza
+ * @author Tiago Moura Chaves
+ * @since Classe criada em 31/10/2024
+ */
+public class Margherita implements Pizza{
+
+    @Override
+    public void montar() {
+        System.out.println("Pizza Marguerita");
+        System.out.println("Molho de tomate, tomate, manjericão, queijo, orégano");
+    }
+
+    @Override
+    public void assar() {
+        System.out.println("Tempo de forno: 15 minutos");
+    }
+
+    @Override
+    public void cobrar() {
+        System.out.println("R$45,00");
+    }
+
+}//fim da classe
