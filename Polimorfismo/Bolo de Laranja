@@ -1,0 +1,25 @@
+
+
+/**
+ * Classe para implementar TODOS os métodos da interface Pizza para preparar um bolo
+ * @author Tiago Moura Chaves
+ * 
+ */
+public class BoloLaranja implements Pizza{
+    
+    @Override
+    public void montar() {
+        System.out.println("Bolo de Laranja");
+        System.out.println("Farinha de trigo, fermento, ovos, açúcar, suco de laranja");
+    }
+    
+    @Override
+    public void assar() {
+        System.out.println("Tempo de forno: 40 minutos");
+    }
+    
+    @Override
+    public void cobrar() {
+        System.out.println("Preço: R$ 22,00");
+    }
+}//fim da classe
