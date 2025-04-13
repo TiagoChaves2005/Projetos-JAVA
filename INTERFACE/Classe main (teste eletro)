@@ -1,0 +1,18 @@
+
+/**
+ *Classe para instanciar objetos do tipo Eletrodomestico
+ * @author Tiago Chaves
+ * 24/10/2024
+ */
+public class TestaEletro {
+    public static void main (String[] args) throws InterruptedException{
+        TV tv = new TV();
+        tv.ligar();
+        tv.desligar();
+        tv.ligar();
+        tv.ativarSoneca(5);
+        
+        Microondas m = new Microondas();
+        m.ligar(15);
+    }//fim do main
+}//Fim da classe
